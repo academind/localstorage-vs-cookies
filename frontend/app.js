@@ -45,7 +45,7 @@ function loadFromCookie() {
 }
 
 async function sendData() {
-  loadFromLocalStorage();
+  // loadFromLocalStorage();
   // loadFromCookie();
   console.log(loadedToken);
   const response = await fetch('http://localhost:3000/user-data', {
@@ -63,9 +63,9 @@ async function sendData() {
 }
 
 sendDataBtn.addEventListener('click', sendData);
-saveDataBtn.addEventListener('click', getAndSaveTokenLocalStorage);
+// saveDataBtn.addEventListener('click', getAndSaveTokenLocalStorage);
 // saveDataBtn.addEventListener('click', getAndSaveTokenCookie);
-// saveDataBtn.addEventListener('click', getAndSaveTokenHttpOnlyCookie);
+saveDataBtn.addEventListener('click', getAndSaveTokenHttpOnlyCookie);
 
 const messageInput = document.getElementById('message');
 const imageUrlInput = document.getElementById('image-url');
