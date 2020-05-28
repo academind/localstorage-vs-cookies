@@ -18,7 +18,7 @@ app.get('/user-data', (req, res) => {
   // Parse token from headers
   const authHeader = req.headers.authorization;
   let token = authHeader.split(' ')[1]; // For "Bearer TOKEN" => get TOKEN
-  if (!token || token === 'undefined') {
+  if (!token || token === 'undefined') { // If token can't be found in "authorization" header, check cookies
     token = req.headers.cookie
       .split('; ')
       .find((c) => c.startsWith('token'))
