@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XSS &amp; Browser Storage</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <section id="controls">
+      <button id="save-data-btn">Fetch Token &amp; Save</button>
+      <button id="send-data-btn">Send Request with Auth Data</button>
+    </section>
+    <section id="user-input">
+      <form>
+        <label for="message">Your Message</label>
+        <textarea rows="4" id="message"></textarea>
+        <label for="image-url">Message Image Url</label>
+        <input type="url" id="image-url" />
+        <button>Submit</button>
+      </form>
+    </section>
+    <section id="user-output"></section>
+  </body>
+</html>
